@@ -37,6 +37,7 @@ namespace ServiceHelper
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SelectFilePathRichTextBox = new System.Windows.Forms.RichTextBox();
             this.ServiceStatusLabel = new System.Windows.Forms.Label();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InstallServiceButton
@@ -51,7 +52,7 @@ namespace ServiceHelper
             // 
             // StartServiceButton
             // 
-            this.StartServiceButton.Location = new System.Drawing.Point(211, 99);
+            this.StartServiceButton.Location = new System.Drawing.Point(200, 99);
             this.StartServiceButton.Name = "StartServiceButton";
             this.StartServiceButton.Size = new System.Drawing.Size(94, 38);
             this.StartServiceButton.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace ServiceHelper
             // 
             // StopServiceButton
             // 
-            this.StopServiceButton.Location = new System.Drawing.Point(392, 99);
+            this.StopServiceButton.Location = new System.Drawing.Point(342, 99);
             this.StopServiceButton.Name = "StopServiceButton";
             this.StopServiceButton.Size = new System.Drawing.Size(94, 38);
             this.StopServiceButton.TabIndex = 2;
@@ -71,7 +72,7 @@ namespace ServiceHelper
             // 
             // UninstallServiceButton
             // 
-            this.UninstallServiceButton.Location = new System.Drawing.Point(572, 99);
+            this.UninstallServiceButton.Location = new System.Drawing.Point(479, 99);
             this.UninstallServiceButton.Name = "UninstallServiceButton";
             this.UninstallServiceButton.Size = new System.Drawing.Size(94, 38);
             this.UninstallServiceButton.TabIndex = 3;
@@ -112,11 +113,22 @@ namespace ServiceHelper
             this.ServiceStatusLabel.Size = new System.Drawing.Size(0, 12);
             this.ServiceStatusLabel.TabIndex = 8;
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Location = new System.Drawing.Point(622, 102);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(44, 32);
+            this.RefreshButton.TabIndex = 9;
+            this.RefreshButton.Text = "刷新";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Clilk);
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 158);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.ServiceStatusLabel);
             this.Controls.Add(this.SelectFilePathRichTextBox);
             this.Controls.Add(this.SelectFileButton);
@@ -141,6 +153,7 @@ namespace ServiceHelper
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.RichTextBox SelectFilePathRichTextBox;
         private System.Windows.Forms.Label ServiceStatusLabel;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
 
